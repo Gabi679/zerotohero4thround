@@ -1,0 +1,24 @@
+<navbar></navbar>
+
+<div class="offset"></div>
+<mat-grid-list cols="4" rowHeight="100px">
+  <mat-grid-tile   [colspan]="4" [rowspan]="1">
+    <div class="myQuestions" (click)="goToMyQuestions()">
+      <h1>{{'own questions'| translate}}</h1>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="4" [rowspan]="1" >
+  <h1>{{'new questions'| translate}}</h1>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+  <div  *ngFor="let question of questionList.slice().reverse()" >
+    <div *ngIf="!question.isPrivate" fxFlex="50"   class="tile" fxLayout="row">  
+     <div class="date" fxFlex="30" fxLayout="column" >
+        <span fxFlex="35" class="day" >{{question.day}}</span>
+        <span fxFlex="65" class="month">{{question.month}}</span>
+      </div>
+      <div class="title" fxFlex="70" layout="column" (click)="this.goToQuestion(question.id)">{{question.title}}</div>
+    </div>
+  </div>

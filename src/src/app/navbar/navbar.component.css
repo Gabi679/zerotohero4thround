@@ -1,0 +1,77 @@
+.mat-sidenav-container {
+  background: rgba(0, 0, 0, 0.00);
+}
+
+.blank-grow {
+  flex: 1 1 auto;
+}
+mat-toolbar{
+  background: rgba(0,0,0,0)
+}
+.toogle{
+  background: rgba(0, 0, 0, 0.00);
+  border-width: 0;
+}
+
+/*.largeInput{
+  height: 30vh;
+}
+.bg-primary{
+  background-color: #505050!important;
+}
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none!important;
+}
+li{
+  margin-right: 5%;
+  cursor: pointer;
+  font-size: 14pt;
+  color: white;
+}
+.navbar-brand{
+  color: white!important;
+  cursor: pointer;
+}
+
+.input{
+  width: 100%;
+}
+.input:focus, .input:active {
+  outline-color: #667eea;
+}
+.modal-header{
+  background-color: #505050;
+  color: white;
+  font-weight: lighter!important;
+  font-style: bold
+}
+.modal-body{
+  background-color: #505050;
+  color: white;
+}
+.modal-footer{
+  background-color: #505050;
+  color: white;
+}
+.btn{
+  color: white;
+  background-color: #505050;
+  border-color: black;
+}
+.btn:active{
+  background-color: black!important;
+  border-color: black!important;
+
+}
+.btn:focus{
+  outline-color: black !important;
+  box-shadow: none !important;
+}
+
+.form-control:focus, .form-control:active,{
+  border-color: #505050!important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+*/

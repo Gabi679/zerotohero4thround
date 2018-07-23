@@ -1,0 +1,48 @@
+<navbar></navbar>
+
+<div class="offset"></div>
+<div class="container extra-top-margin" fxLayout="column">
+  <div class="question " fxFlex="30%">
+  <div fxLayout="row" >
+    <div class="header">
+      <p class="title"> {{this.question.title}}</p>
+    </div>
+  </div>
+
+  <div class="extra-top-padding " fxLayout="row">
+      <span class="content" fxFlex="100%">{{this.question.content}}</span>
+  </div>
+  <div class="top-padding ">
+    <div fxLayout="row">
+      <small  fxFlex="100%" ><span class="time"><i class="far fa-calendar-alt"></i>  {{this.question.user}}, {{this.question.month}}. {{this.question.day}}.</span></small>
+    </div>
+  </div>
+  </div>
+  <div class="answer top-margin" fxFlex="10%"  *ngFor="let answer of answers">
+    <div fxLayout="row" >
+      <div fxFlex="20%" fxFlexOffset="5%" >
+         {{answer.who}}
+      </div>
+      <div fxFlex="20%" >
+         {{answer.title}}
+      </div>
+      <div fxFlex="10%" fxFlexOffset="40%"  *ngIf="answer.right==false">
+         <i class="fas fa-times"></i>
+      </div>
+      <div fxFlex="10%" fxFlexOffset="40%"   *ngIf="answer.right==true">
+         <i class="fas fa-check"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<mat-grid-list cols="6" class="grid">
+ <mat-grid-tile   [colspan]="6" [rowspan]="1">
+          <mat-form-field>
+           <input matInput placeholder="{{'new answer'| translate}}" [(ngModel)]="this.title" name="title" class="input">
+        </mat-form-field>
+        <div class="input-group-append">
+          <button mat-raised-button color="primary"   type="button" (click)="this.newAnswer()">{{'send'| translate}}</button>
+        </div>
+ </mat-grid-tile>
+        
+    </mat-grid-list>  

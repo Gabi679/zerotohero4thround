@@ -1,0 +1,37 @@
+
+.container{
+  margin-top: 5%;
+  align-items: center;
+  min-height: 100%;
+  max-height: 100%;
+}
+.large{
+  font-size: 4vw;
+}
+.image{
+  height: 100%;
+}
+.img-thumbnail{
+  background:rgba(0,0,0,0);
+  border-width: 0;
+  width: 30vw;
+}
+.btn{
+  background-color: #505050;
+  border-color: #505050;
+}
+.btn:active{
+  background-color: black!important;
+  border-color: black!important;
+
+}
+.btn:focus{
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.form-control:focus, .form-control:active,{
+  border-color: #505050!important;
+  outline: none !important;
+  box-shadow: none !important;
+}

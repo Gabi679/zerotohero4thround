@@ -1,0 +1,23 @@
+
+  <div class="container">
+    <mat-grid-list cols="6" rowHeight="65px" >
+    <mat-grid-tile   [colspan]="6" [rowspan]="3">
+      <img class="image" src="https://www.grandbux.net/img/user.png">
+  </mat-grid-tile>
+
+
+ <mat-grid-tile   [colspan]="6" [rowspan]="1">
+      <label class="form-signin-heading large">{{'please login'| translate}}</label>
+ </mat-grid-tile>
+ <mat-grid-tile   [colspan]="6" [rowspan]="2">
+          <mat-form-field>
+           <input matInput [placeholder]="'username' | translate"
+             [(ngModel)]="userName">
+        </mat-form-field>
+        <div class="input-group-append">
+          <button mat-raised-button color="primary"  type="button" (click)="login()" mat-dialog-close>{{'login'| translate}} </button>
+        </div>
+ </mat-grid-tile>
+        
+    </mat-grid-list>  
+  </div>

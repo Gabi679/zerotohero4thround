@@ -1,0 +1,29 @@
+
+<mat-sidenav-container  id="container" fullscreen (click)="close()">
+	<mat-sidenav #sidenav  id="side">
+		<mat-nav-list>
+			<a mat-list-item (click)="goToHome()">
+				<mat-icon mat-list-icon>home</mat-icon>
+				<span mat-line>{{'questions'| translate}}</span>
+			</a>
+			<a mat-list-item  (click)="openAddDialog()">
+				<mat-icon mat-list-icon >add</mat-icon>
+				<span mat-line>{{'new'| translate}}</span>
+			</a>
+      <a mat-list-item (click)="logout()">
+				<mat-icon mat-list-icon >perm_identity</mat-icon>
+				<span mat-line>{{'logout'| translate}}</span>
+			</a>
+      <a mat-list-item (click)="translate()">
+				<mat-icon mat-list-icon >autorenew</mat-icon>
+				<span mat-line>{{'change'| translate}}</span>
+			</a>
+		</mat-nav-list>
+	</mat-sidenav>
+  	<mat-toolbar >
+		<button mat-icon-button class="toogle"(click)="sidenav.open(); zIndexUp()" fxHide="false" >
+      <mat-icon>menu</mat-icon>
+    </button>
+		<span (click)="goToHome()">Q & A</span>
+	</mat-toolbar>
+</mat-sidenav-container>

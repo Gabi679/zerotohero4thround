@@ -1,0 +1,39 @@
+<navbar></navbar>
+
+<div class="offset"></div>
+<div class="container extra-top-margin" fxLayout="column">
+  <div *ngFor="let question of questions" class=" extra-top-margin" fxLayout="column">
+  <div  class="question" fxFlex="30%">
+  <div fxLayout="row">
+  <div class=" header">
+      <p class="title"> {{this.question.title}}</p>
+    </div>
+  </div>
+
+  <div class=" extra-top-padding" fxLayout="row">
+      <span class="content"  fxFlex="100%">{{this.question.content}}</span>
+  </div>
+  <div class="top-padding ">
+    <span class="who"  fxFlexOffset="5%" fxFlex="95%" ><i class="far fa-calendar-alt"></i>   {{this.question.user}}, {{this.question.month}}. {{this.question.day}}.</span>
+  </div>
+  </div>
+  <div class="extra-top-padding bottom-padding" fxLayout="column">
+  <div class="answer top-margin" fxFlex="10%"  *ngFor="let answer of getAnswers(question.id)" (click)="setAnswerCorrect(answer.id, question.id)">
+    <div fxLayout="row" >
+      <div fxFlex="20%" fxFlexOffset="5%" >
+         {{answer.who}}
+      </div>
+      <div fxFlex="20%">
+         {{answer.title}}
+      </div>
+ <div fxFlex="10%" fxFlexOffset="40%"  *ngIf="answer.right==false">
+         <i class="fas fa-times"></i>
+      </div>
+      <div fxFlex="10%" fxFlexOffset="40%"  *ngIf="answer.right==true">
+         <i class="fas fa-check"></i>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+body{
+    background: linear-gradient(-45deg, #667eea, #764ba2);
+    min-height: 100vh;
+  }
